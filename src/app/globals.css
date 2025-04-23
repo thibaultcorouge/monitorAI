@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --background: #e6eae6;
+  --foreground: #171717;
+  --fontdark: #778574;
+  --fontlightdark :#535F50;
+  --font-quicksand: 'Quicksand', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #e6eae6;
+    --foreground: #171717;
+    --fontdark: #3B4339;
+    --fontlightdark :#535F50;
+    --backgrounddark: #849481;
+    --font-quicksand: 'Quicksand', sans-serif;
+    --font-backgroundgreenlight: #ced4cd;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--fontdark);
+  font-family: var(--font-quicksand);
+}
+
+.card-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card-animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bg-greenwhite {
+  background-color: #F0F2EF ;
+}
+
+.bg-greenbutton {
+  background-color: #e6eae6 ;
+  color:#a9b4a7;
+}
+
+.bg-darkgreenbutton {
+  background-color: #778574;
+  color: #F0F2EF;
+  cursor:pointer;
+}
+/* #778574
+#a9b4a7 */
+.bg-darkgreenbutton-hover:hover {
+  transition: 0.3s ease-in-out;
+  background-color: #a9b4a7;
+  color: #F0F2EF ;
+
+}
+
+.buttontext {
+  color : #778574;
+}
+
+.buttontext-hover:hover{
+  
+  text-underline-position: below;
+  text-decoration: underline;
+}
+
+.nav-menu {
+  color: #778574 ;
+  /* font-weight: bold; */
+}
+
+.nav-menu-hover:hover {
+  transition: 0.3s ease-in-out;
+  color:#a9b4a7;
+  border-color: #a9b4a7;
+
+}
+
+.nav-menu-isactive {
+  color: #a9b4a7;
+  /* font-weight: bold; */
+  border-color: #a9b4a7;
+}
+
+
+.input{
+  border-style: solid;
+  border-width:1px;
+  border-color: #ced4cd;
+}
+
+.inputfocus:focus {
+  outline: none;
+  border-width: 1px;
+  border-color: #a9b4a7
+}
+
+.alert-validation {
+  border-style: solid;
+  border-width:1px;
+  border-color: #339933;
+  background-color:#cce6cc;
+  color: #339933;
+}
+
+.alert-error{
+  border-style: solid;
+  border-width:1px;
+  border-color: #ff3333;
+  background-color:#ffcccc;
+  color: #ff3333;
+}
+/* .card-hover {
+  transition: transofrm 0.3s ease, boxshadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+} */
